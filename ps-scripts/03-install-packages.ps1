@@ -39,6 +39,7 @@ choco.exe install -y `
     mpc-hc `
     nodejs.install `
     obs-studio `
+    putty `
     procexp `
     procmon `
     pycharm `
@@ -62,6 +63,7 @@ choco.exe install -y `
     virtualbox `
     vivaldi `
     vscode `
+    weasel-pageant.portable `
     whatsapp `
     winmerge `
     winscp `
