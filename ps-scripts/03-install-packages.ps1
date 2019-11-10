@@ -18,14 +18,13 @@ choco.exe install -y `
     dotnet4.6.1 `
     everything `
     foobar2000 `
-    fork `
     gimp `
+    git-fork `
     git.install `
     gitkraken `
     goggalaxy `
     golang `
     gpu-z `
-    helm `
     hg `
     irfanview `
     jetbrainstoolbox `
@@ -33,13 +32,15 @@ choco.exe install -y `
     jre8 `
     kitty `
     kubernetes-cli `
-    make-mkv `
+    kubernetes-helm `
+    makemkv `
     mingw `
     minikube `
     mpc-hc `
     nodejs.install `
     obs-studio `
-    processexp `
+    procexp `
+    procmon `
     pycharm `
     python2 `
     python3 `
@@ -64,8 +65,8 @@ choco.exe install -y `
     whatsapp `
     winmerge `
     winscp `
-    yarn `
     wsl `
+    yarn `
     # This non-empty line is important, do not move it
 
 scoop.cmd bucket add extras
