@@ -33,6 +33,7 @@ choco.exe install -y `
     kitty `
     kubernetes-cli `
     kubernetes-helm `
+    kubeval `
     makemkv `
     mingw `
     minikube `
@@ -42,7 +43,6 @@ choco.exe install -y `
     putty `
     procexp `
     procmon `
-    pycharm `
     python2 `
     python3 `
     qbittorrent `
@@ -70,6 +70,8 @@ choco.exe install -y `
     wsl `
     yarn `
     # This non-empty line is important, do not move it
+
+# TODO: kubeseal, kubernetic, kubebox
 
 scoop.cmd bucket add extras
 
