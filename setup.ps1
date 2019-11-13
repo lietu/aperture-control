@@ -13,16 +13,17 @@ function Unzip {
 }
 
 Write-Host "Downloading $url to $zip"
-Remove-Item -Force $zip -ErrorAction SilentlyContinue
-$wc = New-Object System.Net.WebClient
-$wc.DownloadFile($url, $zip)
+#Remove-Item -Force $zip -ErrorAction SilentlyContinue
+#$wc = New-Object System.Net.WebClient
+#$wc.DownloadFile($url, $zip)
 
 Write-Host "Cleaning $target"
-Remove-Item -Recurse -Force $target -ErrorAction SilentlyContinue
-Write-Host "Extracting $zip to $target"
-Unzip $zip $target
+#Remove-Item -Recurse -Force $target -ErrorAction SilentlyContinue
+#Write-Host "Extracting $zip to $target"
+#Unzip $zip $target
 
 # Elevate to Administrator and continue
 # TODO: Get "aperture-control" name from repo name argument
+$target = $pwd
 Write-Host "Launching $target\aperture-control-master\run-ac-scripts.ps1 as Administrator"
 Start-Process -Wait -Verb runAs -ArgumentList "-ExecutionPolicy", "Bypass", "-NoLogo", "-NonInteractive", "-Command", "cd $target\aperture-control-master; .\run-ac-scripts.ps1" powershell.exe
