@@ -172,6 +172,7 @@ $java = ((Get-ChildItem "C:\Program Files\Java\" -Filter "jre*") | Sort-Object)[
 
 system_top(@(
     "C:\Go\bin",
+    "C:\source\go\bin",
     "C:\ProgramData\chocolatey\bin",
     "C:\Python38",
     "C:\Python38\Scripts",
