@@ -98,7 +98,7 @@ $scoopInstalled = scoop.cmd list | ForEach-Object {
 # Install packages
 $chocoPackages | ForEach-Object {
     $pkg = $_
-    if (-Not ($chocoInstalled -contains $pkg)) {
+    if ($chocoInstalled -contains $pkg) {
         Write-Host "Already have $pkg installed."
     } else {
         choco.exe install -y $pkg
@@ -107,7 +107,7 @@ $chocoPackages | ForEach-Object {
 
 $scoopPackages | ForEach-Object {
     $pkg = $_
-    if (-Not ($scoopInstalled -contains $pkg)) {
+    if ($scoopInstalled -contains $pkg) {
         Write-Host "Already have $pkg installed."
     } else {
         scoop.cmd install $pkg
