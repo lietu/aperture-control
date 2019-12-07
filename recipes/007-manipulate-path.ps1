@@ -171,13 +171,11 @@ function system_remove([string[]]$paths) {
 $java = ((Get-ChildItem "C:\Program Files\Java\" -Filter "jre*") | Sort-Object)[-1]
 
 system_top(@(
-    "C:\Go\bin",
-    "C:\source\go\bin",
-    "C:\ProgramData\chocolatey\bin",
     "C:\Python38",
     "C:\Python38\Scripts",
     "C:\Python27",
     "C:\Python27\Scripts",
+    "C:\ProgramData\chocolatey\bin",
     "C:\Program Files\Java\$java\bin",
     "" # To make it so entries above can all have trailing commas
 ))
@@ -193,6 +191,7 @@ system_remove(@(
 user_top(@(
     "$env:USERPROFILE\bin",
     "C:\Go\bin",
+    "C:\source\go\bin",
     "C:\tools\cygwin\sbin",
     "C:\tools\cygwin\usr\sbin",
     "C:\tools\cygwin\bin",

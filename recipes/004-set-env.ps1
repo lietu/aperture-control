@@ -1,14 +1,18 @@
-function set_env([string]$name, $value) {
-    $path = "env:\$name"
-    if (Get-Item -Path $path) {
-        Set-Item -Path $path -Value $value
-    } else {
-        New-Item -Path $path -Value $value
-    }
+function user_env([string]$name, [string]$value) {
+    [System.Environment]::SetEnvironmentVariable($name, $value, 'User')
+    [System.Environment]::SetEnvironmentVariable($name, $value, 'Process')
+}
+
+function machine_env([string]$name, [string]$value) {
+    [System.Environment]::SetEnvironmentVariable($name, $value, 'Machine')
+    [System.Environment]::SetEnvironmentVariable($name, $value, 'Process')
 }
 
 # Make Git use Pageant for SSH keys
-set_env GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
+user_env GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
 
 # Path for Go sources etc.
-set_env GOPATH C:\source\go
+user_env GOPATH C:\source\go
+
+user_env SLACK_DEVELOPER_MENU true
+
