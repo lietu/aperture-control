@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Try and disable the "Animate controls inside elements" -setting
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects​]
+"VisualFXSetting"=dword:00000003
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"UserPreferencesMask"=hex:9e,1e,07,80,10,00,00,00
