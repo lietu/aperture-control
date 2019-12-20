@@ -5,6 +5,7 @@ $url = "https://github.com/$repo/archive/master.zip"
 $zip = "$env:USERPROFILE\Downloads\aperture-control.zip"
 $target = "$env:USERPROFILE\aperture-control" 
 
+New-Item -ItemType Directory -Force -Path $target
 Start-Transcript -Path "$target\setup.log"
     
 # https://stackoverflow.com/a/27768628
