@@ -5,11 +5,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 $installed = [boolean](Get-AppxPackage | Select-String ubuntu)
 
 if (-Not $installed) {
-    Write-Host "Installing Ubuntu 18.04 LTS"
+    Write-Output "Installing Ubuntu 18.04 LTS"
     $installer = "$env:USERPROFILE\Downloads\Ubuntu.appx"
     Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile $installer -UseBasicParsing
     Add-AppxPackage $installer
     Remove-Item $installer
 } else {
-    Write-Host "Ubuntu already installed."
+    Write-Output "Ubuntu already installed."
 }

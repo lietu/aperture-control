@@ -1,5 +1,5 @@
 if (Get-Command scoop.cmd -ErrorAction SilentlyContinue) {
-    Write-Host "Scoop already installed, upgrading instead."
+    Write-Output "Scoop already installed, upgrading instead."
     scoop.cmd update scoop
     scoop.cmd update
 } else {
