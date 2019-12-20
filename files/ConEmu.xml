@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-12-20 12:54:06" build="191012">
+		<key name=".Vanilla" modified="2019-12-20 12:57:19" build="191012">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -249,8 +249,8 @@
 			<value name="ConWnd X" type="long" data="0"/>
 			<value name="ConWnd Y" type="long" data="1069"/>
 			<value name="LastMonitor" type="string" data="0,0,3840,2120"/>
-			<value name="ConWnd Width" type="dword" data="000000ed"/>
-			<value name="ConWnd Height" type="dword" data="00000039"/>
+			<value name="ConWnd Width" type="dword" data="000000bd"/>
+			<value name="ConWnd Height" type="dword" data="00000033"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="Language" type="string" data="en"/>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
@@ -460,7 +460,7 @@
 			<value name="KeyBarRClick" type="hex" data="01"/>
 			<value name="StatusBar.Show" type="hex" data="01"/>
 			<value name="StatusBar.Flags" type="dword" data="00000002"/>
-			<value name="StatusFontFace" type="string" data="Segoe UI"/>
+			<value name="StatusFontFace" type="string" data="DejaVu Sans Mono"/>
 			<value name="StatusFontCharSet" type="ulong" data="0"/>
 			<value name="StatusBar.Color.Back" type="dword" data="00423607"/>
 			<value name="StatusBar.Color.Light" type="dword" data="00e3f6fd"/>
