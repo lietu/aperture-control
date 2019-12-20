@@ -190,6 +190,8 @@ system_remove(@(
 
 user_top(@(
     "$env:USERPROFILE\bin",
+    "$env:USERPROFILE\.pyenv\pyenv-win\bin",
+    "$env:USERPROFILE\.pyenv\pyenv-win\shims",
     "C:\Go\bin",
     "C:\source\go\bin",
     "C:\tools\cygwin\sbin",
@@ -204,5 +206,6 @@ user_bottom(@(
 ))
 
 user_remove(@(
+    "$env:USERPROFILE\AppData\Local\Microsoft\WindowsApps",
     "" # To make it so entries above can all have trailing commas
 ))
