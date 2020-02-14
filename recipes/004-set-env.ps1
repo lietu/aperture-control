@@ -14,5 +14,3 @@ user_env GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
 # Path for Go sources etc.
 user_env GOPATH C:\source\go
 
-user_env SLACK_DEVELOPER_MENU true
-

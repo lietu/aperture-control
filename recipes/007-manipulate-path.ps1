@@ -173,8 +173,6 @@ $java = ((Get-ChildItem "C:\Program Files\Java\" -Filter "jre*") | Sort-Object)[
 system_top(@(
     "C:\Python38",
     "C:\Python38\Scripts",
-    "C:\Python27",
-    "C:\Python27\Scripts",
     "C:\ProgramData\chocolatey\bin",
     "C:\Program Files\Java\$java\bin",
     "" # To make it so entries above can all have trailing commas
@@ -190,8 +188,6 @@ system_remove(@(
 
 user_top(@(
     "$env:USERPROFILE\bin",
-    "$env:USERPROFILE\.pyenv\pyenv-win\bin",
-    "$env:USERPROFILE\.pyenv\pyenv-win\shims",
     "C:\Go\bin",
     "C:\source\go\bin",
     "C:\tools\cygwin\sbin",
