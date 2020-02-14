@@ -1,6 +1,7 @@
 # Install all the packages you want to use in other scripts
 
 $chocoPackages = @(
+	"1password",
 	"7zip.install",
 	"adobereader",
 	"aria2",
@@ -12,7 +13,6 @@ $chocoPackages = @(
 	"cpu-z.install",
 	"cyg-get",
 	"cygwin",
-	"dashlane",
 	"dejavufonts",
 	"discord.install",
 	"docker-cli",
