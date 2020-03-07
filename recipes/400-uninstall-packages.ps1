@@ -3,7 +3,8 @@
 $chocoPackages = @(
     "dashlane",
     "skyfonts",
-    "python2"
+    "python2",
+    "kubeval"
 )
 
 # ----- LOGIC ----- #
