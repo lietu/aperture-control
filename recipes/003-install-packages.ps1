@@ -34,7 +34,7 @@ $chocoPackages = @(
 	"kitty",
 	"kubernetes-cli",
 	"kubernetes-helm",
-	"kubeval",
+	# "kubeval", ... Until https://github.com/instrumenta/kubeval/pull/212 is merged
 	"makemkv",
 	"mingw",
 	"minikube",
