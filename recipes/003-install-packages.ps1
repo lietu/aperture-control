@@ -124,9 +124,9 @@ $wingetPackages | ForEach-Object {
 	} else {
 		if ($pkg -match "@") {
 			$name, $version = $pkg.split("@")
-			winget.exe install --version "$version" -e "$name"
+			winget.exe install --silent --version "$version" -e "$name"
 		} else {
-			winget.exe install -e "$pkg"
+			winget.exe install --silent -e "$pkg"
 		}
 		Add-Content "$wingetPackageList" "`n$pkg"
 	}
