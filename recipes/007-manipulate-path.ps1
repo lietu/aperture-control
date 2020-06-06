@@ -174,6 +174,10 @@ system_top(@(
     "C:\Python38",
     "C:\Python38\Scripts",
     "C:\ProgramData\chocolatey\bin",
+    "C:\tools\cygwin\sbin",
+    "C:\tools\cygwin\usr\sbin",
+    "C:\tools\cygwin\bin",
+    "C:\tools\cygwin\usr\local\bin",
     "C:\Program Files\Java\$java\bin",
     "" # To make it so entries above can all have trailing commas
 ))
@@ -198,10 +202,10 @@ user_top(@(
 ))
 
 user_bottom(@(
+    "$env:USERPROFILE\AppData\Local\Microsoft\WindowsApps",
     "" # To make it so entries above can all have trailing commas
 ))
 
 user_remove(@(
-    "$env:USERPROFILE\AppData\Local\Microsoft\WindowsApps",
     "" # To make it so entries above can all have trailing commas
 ))

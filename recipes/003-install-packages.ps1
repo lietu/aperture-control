@@ -67,6 +67,7 @@ $chocoPackages = @(
 	"whatsapp",
 	"winmerge",
 	"winscp",
+	"wiztree",
 	"wsl",
 	"yarn"
 )
