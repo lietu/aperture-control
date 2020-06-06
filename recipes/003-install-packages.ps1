@@ -39,7 +39,7 @@ $chocoPackages = @(
 	"mingw",
 	"minikube",
 	"mpc-hc",
-	"nodejs.install",
+	"nodejs-lts",
 	"obs-studio",
 	"putty",
 	"procexp",
