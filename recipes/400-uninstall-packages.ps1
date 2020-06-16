@@ -1,6 +1,8 @@
 # Uninstall old packages
 
 $chocoPackages = @(
+	"chocolateygui",
+	"git-fork",
     "dashlane",
     "skyfonts",
     "python2",
