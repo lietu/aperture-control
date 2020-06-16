@@ -198,6 +198,7 @@ user_top(@(
     "C:\tools\cygwin\usr\sbin",
     "C:\tools\cygwin\bin",
     "C:\tools\cygwin\usr\local\bin",
+    "$env:USERPROFILE\.poetry\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 
