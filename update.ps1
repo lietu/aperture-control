@@ -56,7 +56,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 function Unzip {
     param([string]$zipfile, [string]$outpath)
 
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath, $true)
 }
 
 Write-Output "Downloading $url to $zip"
@@ -69,7 +69,9 @@ $repoName = $repo.Split("/")[1]
 
 if (Test-Path "$target\$repoName-master") {
     Write-Output "Cleaning $target\$repoName-master"
-    Remove-Item -ErrorAction Ignore -Recurse -Force "$target\$repoName-master"
+    Remove-Item -ErrorAction SilentlyContinue -Recurse -Force "$target\$repoName-master\files"
+    Remove-Item -ErrorAction SilentlyContinue -Recurse -Force "$target\$repoName-master\recipes"
+    Remove-Item -ErrorAction SilentlyContinue -Recurse -Force "$target\$repoName-master\"
 }
 Write-Output "Extracting $zip to $target"
 Unzip $zip $target
