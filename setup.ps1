@@ -8,14 +8,6 @@ $target = "$env:USERPROFILE\aperture-control"
 New-Item -ItemType Directory -Force -Path $target
 Start-Transcript -Path "$target\setup.log"
     
-# https://stackoverflow.com/a/27768628
-Add-Type -AssemblyName System.IO.Compression.FileSystem
-function Unzip {
-    param([string]$zipfile, [string]$outpath)
-
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
-}
-
 Write-Output "Downloading $url to $zip"
 if (Test-Path $zip) {
     Remove-Item -Force $zip
@@ -28,7 +20,7 @@ if (Test-Path $target) {
     Remove-Item -ErrorAction Ignore -Recurse -Force $target
 }
 Write-Output "Extracting $zip to $target"
-Unzip $zip $target
+Expand-Archive $zip -DestinationPath $target -Force
 
 $response = Invoke-WebRequest "https://api.github.com/repos/$repo/commits/master" -UseBasicParsing
 $sha = ($response.Content | ConvertFrom-Json).sha

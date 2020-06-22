@@ -51,12 +51,9 @@ Write-Output "New commits found - updating"
 $url = "https://github.com/$repo/archive/master.zip"
 $zip = "$env:USERPROFILE\Downloads\aperture-control.zip"
 
-# https://stackoverflow.com/a/27768628
-Add-Type -AssemblyName System.IO.Compression.FileSystem
 function Unzip {
     param([string]$zipfile, [string]$outpath)
-
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath, $true)
+    Expand-Archive $zipfile -DestinationPath $outpath -Force
 }
 
 Write-Output "Downloading $url to $zip"
