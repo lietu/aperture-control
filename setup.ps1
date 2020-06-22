@@ -25,7 +25,7 @@ $wc.DownloadFile($url, $zip)
 
 if (Test-Path $target) {
     Write-Output "Cleaning $target"
-    Remove-Item -Recurse -Force $target
+    Remove-Item -ErrorAction Ignore -Recurse -Force $target
 }
 Write-Output "Extracting $zip to $target"
 Unzip $zip $target

@@ -69,7 +69,7 @@ $repoName = $repo.Split("/")[1]
 
 if (Test-Path "$target\$repoName-master") {
     Write-Output "Cleaning $target\$repoName-master"
-    Remove-Item -Recurse -Force "$target\$repoName-master"
+    Remove-Item -ErrorAction Ignore -Recurse -Force "$target\$repoName-master"
 }
 Write-Output "Extracting $zip to $target"
 Unzip $zip $target
