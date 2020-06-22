@@ -51,6 +51,8 @@ $chocoPackages = @(
 	"telegram.install",
 	"tortoisesvn",
 	"vcbuildtools",
+	"visualstudio2017buildtools",
+	"visualstudio2019buildtools",
 	"vcredist-all",
 	"veracrypt",
 	"virtualbox",
