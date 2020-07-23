@@ -168,7 +168,11 @@ function system_remove([string[]]$paths) {
 #
 
 # Figure out latest Java JRE version installed
-$java = ((Get-ChildItem "C:\Program Files\Java\" -Filter "jre*") | Sort-Object)[-1]
+$jre = ((Get-ChildItem "C:\Program Files\OpenJDK\" -Filter "*-jre") | Sort-Object)[-1]
+$jdk = ((Get-ChildItem "C:\Program Files\OpenJDK\" -Filter "openjdk*") | Sort-Object)[0]
+
+echo $jre
+echo $jdk
 
 system_top(@(
     "C:\Python38",
@@ -178,7 +182,8 @@ system_top(@(
     "C:\tools\cygwin\usr\sbin",
     "C:\tools\cygwin\bin",
     "C:\tools\cygwin\usr\local\bin",
-    "C:\Program Files\Java\$java\bin",
+    "C:\Program Files\OpenJDK\$jdk\bin",
+    "C:\Program Files\OpenJDK\$jre\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 
@@ -199,6 +204,9 @@ user_top(@(
     "C:\tools\cygwin\bin",
     "C:\tools\cygwin\usr\local\bin",
     "$env:USERPROFILE\.poetry\bin",
+    "C:\android\android-sdk\tools",
+    "C:\android\android-sdk\tools\bin",
+    "C:\android\android-sdk\platform-tools\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 

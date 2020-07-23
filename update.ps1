@@ -51,11 +51,6 @@ Write-Output "New commits found - updating"
 $url = "https://github.com/$repo/archive/master.zip"
 $zip = "$env:USERPROFILE\Downloads\aperture-control.zip"
 
-function Unzip {
-    param([string]$zipfile, [string]$outpath)
-    Expand-Archive $zipfile -DestinationPath $outpath -Force
-}
-
 Write-Output "Downloading $url to $zip"
 if (Test-Path $zip) {
     Remove-Item -Force $zip
@@ -71,7 +66,7 @@ if (Test-Path "$target\$repoName-master") {
     Remove-Item -ErrorAction SilentlyContinue -Recurse -Force "$target\$repoName-master\"
 }
 Write-Output "Extracting $zip to $target"
-Unzip $zip $target
+Expand-Archive $zip -DestinationPath $target -Force
 
 Write-Output "Running run-ac-recipes.ps1"
 Start-Process -Wait -Verb runAs -ArgumentList "-ExecutionPolicy", "Bypass", "-NoLogo", "-NonInteractive", "-Command", "cd $acpath; .\run-ac-recipes.ps1" powershell.exe
