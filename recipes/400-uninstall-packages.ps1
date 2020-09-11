@@ -15,8 +15,7 @@ $chocoPackages = @(
 $appxPackages = @(
     "king.com.",
     "Microsoft.Zune",
-    "SpotifyAB.",
-    "Microsoft.SkypeApp"
+    "SpotifyAB."
 )
 
 # ----- LOGIC ----- #

@@ -24,7 +24,6 @@ $chocoPackages = @(
 	"irfanview",
 	"jetbrainstoolbox",
 	"jq",
-	"kitty",
 	"kubernetes-cli",
 	"kubernetes-helm",
 	# "kubeval", ... Until https://github.com/instrumenta/kubeval/pull/212 is merged
@@ -51,30 +50,25 @@ $chocoPackages = @(
 	"sublimemerge",
 	"sysinternals",
 	"telegram.install",
-	"tortoisesvn",
 	"vcbuildtools",
 	"visualstudio2017buildtools",
 	"visualstudio2019buildtools",
 	"vcredist-all",
 	"veracrypt",
 	"virtualbox",
-	"vivaldi",
 	"vscode",
 	"weasel-pageant.portable",
 	"whatsapp",
 	"winmerge",
 	"winscp",
 	"wiztree",
-	"wsl",
 	"yarn"
 )
 
 $scoopPackages = @(
-    "brave",
     "dos2unix",
     "lame",
     "pypy3",
-    "youtube-dl"
 )
 
 scoop.cmd bucket add extras
