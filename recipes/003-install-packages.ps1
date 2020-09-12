@@ -68,7 +68,7 @@ $chocoPackages = @(
 $scoopPackages = @(
     "dos2unix",
     "lame",
-    "pypy3",
+    "pypy3"
 )
 
 scoop.cmd bucket add extras
