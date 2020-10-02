@@ -49,6 +49,7 @@ $chocoPackages = @(
 	"virtualbox",
 	"vscode",
 	"weasel-pageant.portable",
+	"whocrashed",
 	"winmerge",
 	"winscp",
 	"wiztree",
