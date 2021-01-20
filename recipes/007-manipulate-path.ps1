@@ -175,8 +175,8 @@ echo $jre
 echo $jdk
 
 system_top(@(
-    "C:\Python38",
-    "C:\Python38\Scripts",
+    "C:\Python39",
+    "C:\Python39\Scripts",
     "C:\ProgramData\chocolatey\bin",
     "C:\tools\cygwin\sbin",
     "C:\tools\cygwin\usr\sbin",

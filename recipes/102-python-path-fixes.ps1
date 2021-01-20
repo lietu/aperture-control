@@ -1,6 +1,7 @@
 $junctions = @{
-    "C:\\Python36" = "C:\\Python38";
-    "C:\\Python37" = "C:\\Python38";
+    "C:\\Python36" = "C:\\Python39";
+    "C:\\Python37" = "C:\\Python39";
+    "C:\\Python38" = "C:\\Python39";
 }
 
 $junctions.Keys | ForEach-Object {

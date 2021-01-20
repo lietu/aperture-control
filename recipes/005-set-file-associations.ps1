@@ -24,4 +24,4 @@ function associate([string]$extension, [string]$executable) {
 }
 
 associate ".ppk" "C:\ProgramData\chocolatey\bin\PAGEANT.EXE"
-associate ".py" "C:\python38\python.exe"
+associate ".py" "C:\python39\python.exe"
