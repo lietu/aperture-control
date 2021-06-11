@@ -9,6 +9,7 @@ $chocoPackages = @(
     "kubeval",
     "conemu",
     "gitkraken",
+	"whatsapp",
     "treesizefree"
 )
 

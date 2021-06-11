@@ -197,6 +197,7 @@ system_remove(@(
 
 user_top(@(
     "$env:USERPROFILE\bin",
+    "$env:USERPROFILE\AppData\Roaming\Python\Python39\Scripts",
     "C:\Go\bin",
     "C:\source\go\bin",
     "C:\tools\cygwin\sbin",
@@ -207,11 +208,14 @@ user_top(@(
     "C:\android\android-sdk\tools",
     "C:\android\android-sdk\tools\bin",
     "C:\android\android-sdk\platform-tools\bin",
+    "C:\flutter\bin",
+    "C:\tools\dart-sdk\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 
 user_bottom(@(
     "$env:USERPROFILE\AppData\Local\Microsoft\WindowsApps",
+    "$env:USERPROFILE\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 

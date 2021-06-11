@@ -16,6 +16,8 @@ user_env GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
 # Path for Go sources etc.
 user_env GOPATH C:\source\go
 
+user_env DOCKER_BUILDKIT 1
+
 # Java JDK and Android SDK garbage since they can't configure themselves for some reason
 machine_env JAVA_HOME "C:\Program Files\OpenJDK\$jdk"
 machine_env ANDROID_HOME "C:\Android\android-sdk"
