@@ -177,7 +177,6 @@ echo $jdk
 system_top(@(
     "C:\Python39",
     "C:\Python39\Scripts",
-    "C:\ProgramData\chocolatey\bin",
     "C:\tools\cygwin\sbin",
     "C:\tools\cygwin\usr\sbin",
     "C:\tools\cygwin\bin",
@@ -192,11 +191,13 @@ system_bottom(@(
 ))
 
 system_remove(@(
+    "C:\ProgramData\chocolatey\bin",
     "" # To make it so entries above can all have trailing commas
 ))
 
 user_top(@(
     "$env:USERPROFILE\bin",
+    "C:\ProgramData\chocolatey\bin",
     "$env:USERPROFILE\AppData\Roaming\Python\Python39\Scripts",
     "C:\Go\bin",
     "C:\source\go\bin",
